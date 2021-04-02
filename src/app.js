@@ -1,6 +1,9 @@
 import express from "express";
 import mongoose from "mongoose";
+import cors from "cors"
 import routes from "./routes";
+import path from "path";
+
 
 class App{
 
@@ -12,11 +15,19 @@ class App{
             useUnifiedTopology: true,
         });
 
-        this.middleware();
+        this.middlewares();
         this.routes();
     }
 
-    middleware(){
+    middlewares(){
+
+        this.server.use(cors());
+
+        this.server.use(
+            '/files',
+            express.static(path.resolve(__dirname, '..', 'uploads'))
+        );
+
         //Comando usado para usar comunicação em Json
         this.server.use(express.json());
     }

@@ -1,14 +1,7 @@
 # Api_DevHouse
  
-yarn init -y
-Ele irá criar o package.json
+Aplicação realizada no curso de Node.Js
 
-yarn add express
-Irá criar o node_modules
-node_modules foi adicionado ao .gitignore
+O cursdo - Curso completo de APIs com Nodejs, Express + MongoDB, SQL
 
-yarn add sucrase nodemon -D
-Iremos instalar o Nodemon para fazermos reload automatico e entre outros usos
-E o Sucrase para desenvolvimento em navegadores mais recentes que o Node puro não suporta
-E o -D e para instalar em dependência de desenvolvimento
-
+Link - https://www.udemy.com/course/curso-nodejs/
